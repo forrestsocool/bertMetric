@@ -44,15 +44,3 @@ class ArcMarginProduct(paddle.nn.Layer):
     def forward_test(self, input: paddle.Tensor):
         cosine = paddle.nn.functional.linear(paddle.nn.functional.normalize(input), paddle.nn.functional.normalize(self.weight))
         return cosine
-
-# def arcface_loss(cosine: paddle.Tensor, label, output_classes, m=.4, s=64):
-#     # this prevents nan when a value slightly crosses 1.0 due to numerical error
-#     cosine = cosine.clip(-1 + 1e-7, 1 - 1e-7)
-#     # Step 3:
-#     arcosine = cosine.acos()
-#     # Step 4:
-#     arcosine += F.one_hot(label, num_classes=output_classes) * m
-#     # Step 5:
-#     cosine2 = arcosine.cos()
-#     # Step 6:
-#     return F.cross_entropy(cosine2, label)

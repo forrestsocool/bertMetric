@@ -79,9 +79,3 @@ class TestTransformerEmb(unittest.TestCase):
             emb = self.model(query_input_ids, query_token_type_ids)
             print(emb)
             break
-            #print(query_input_ids)
-            #print(query_token_type_ids)
-            #print(labels)
-            # with paddle.no_grad():
-            #     emb = self.model(query_input_ids, query_token_type_ids)
-            #     print(emb)

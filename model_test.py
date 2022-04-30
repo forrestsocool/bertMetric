@@ -79,9 +79,3 @@ class TestBertMetric(unittest.TestCase):
             probs = self.model(query_input_ids, query_token_type_ids, label=labels)
             print(probs)
             break
-            #print(query_input_ids)
-            #print(query_token_type_ids)
-            #print(labels)
-            # with paddle.no_grad():
-            #     emb = self.model(query_input_ids, query_token_type_ids)
-            #     print(emb)
