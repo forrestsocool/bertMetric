@@ -3,6 +3,7 @@
 * 通过短文本分类任务 + arcface loss 完成finetune预训练模型
 * 使用fastext实现Embedding抽取作为baseline
 * 使用faiss实现最相近的K个item计算，进行线上AB实验对比
+* pyspark拉取数据
 
 # References
 https://github.com/deepinsight/insightface
